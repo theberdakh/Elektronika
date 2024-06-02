@@ -24,9 +24,8 @@ fun HomeScreen(navController: NavHostController) {
     val sections = SectionRepository.getHomeSections()
 
     Column {
-
         LazyVerticalGrid(
-            columns = GridCells.Fixed(3),
+            columns = GridCells.Fixed(1),
         ){
             items(sections){section ->
                 ItemSection(section = section) {

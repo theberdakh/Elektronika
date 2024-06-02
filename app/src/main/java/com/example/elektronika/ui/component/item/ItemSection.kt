@@ -3,6 +3,7 @@ package com.example.elektronika.ui.component.item
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
@@ -44,6 +45,7 @@ fun ItemSection(
                 contentDescription = "Image of section ${section.title}",
                 modifier = Modifier
                     .fillMaxWidth()
+                    .height(100.dp)
                     .padding(8.dp)
 
             )

@@ -1,6 +1,7 @@
 package com.example.elektronika.ui.component.screen
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.Arrangement
@@ -15,7 +16,6 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
-@SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun VideoScreen(url: String) {
     Column(
@@ -26,12 +26,26 @@ fun VideoScreen(url: String) {
     ) {
         AndroidView(factory = { context ->
             YouTubePlayerView(context).apply {
+                enableAutomaticInitialization = false
+               addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+                        override fun onReady(youTubePlayer: YouTubePlayer) {
+                            Log.i("VideoScreen", "$url: https://www.youtube.com/watch?v=$url")
+                            youTubePlayer.loadVideo(url, 0f)
+                        }
+                    })
+            }
+        })
+
+       /*
+        AndroidView(factory = { context ->
+            YouTubePlayerView(context).apply {
                 addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
                     override fun onReady(youTubePlayer: YouTubePlayer) {
+                        Log.i("VideoScreen", "$url: https://www.youtube.com/watch?v=$url")
                         youTubePlayer.loadVideo(url, 0f)
                     }
                 })
             }
-        })
+        })*/
     }
 }

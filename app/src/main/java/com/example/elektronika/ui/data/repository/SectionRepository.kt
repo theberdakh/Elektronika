@@ -14,7 +14,7 @@ object SectionRepository {
         ),
         Section(
             id = 2,
-            title =  "Ámeliyler",
+            title =  "Laboratoriyalar",
             image = R.drawable.physics,
             category = Category.PRACTICAL
         ),
@@ -30,11 +30,11 @@ object SectionRepository {
             category = Category.DOCUMENTS,
             image = R.drawable.folder
         ),
-        Section(
+       /* Section(
             id = 5,
             title = "Imtihan materialları",
             category = Category.EXAM,
             image = R.drawable.exam
-        )
+        )*/
     )
 }
