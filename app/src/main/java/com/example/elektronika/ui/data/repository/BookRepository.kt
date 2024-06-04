@@ -21,7 +21,7 @@ object BookRepository {
             ),
             Book(
                 id = 3,
-                title =": Elektr sxema shamaları",
+                title = ": Elektr sxema shamaları",
                 assetId = R.raw.lecture_3,
                 section = Category.LECTURE
             ),
@@ -57,7 +57,7 @@ object BookRepository {
             ),
             Book(
                 id = 9,
-                title ="Elektr shınjırlardı esaplaw usılları (2-bólim)",
+                title = "Elektr shınjırlardı esaplaw usılları (2-bólim)",
                 assetId = R.raw.lecture_9,
                 section = Category.LECTURE
             ),
@@ -142,7 +142,8 @@ object BookRepository {
             title = "Universal laboratoriya stendi menen tanısıw",
             assetId = R.raw.lab_1,
             section = Category.PRACTICAL
-        ), Book(
+        ),
+        Book(
             id = 2,
             title = "Real mustaqil kernew hám tok dárekleriniń xarakteristikaların izertlew.",
             assetId = R.raw.lab_2,
@@ -159,7 +160,8 @@ object BookRepository {
             title = "RL hám RC shınjırlardı ózgeriwshen jiyiliklerde izertlew.",
             assetId = R.raw.lab_4,
             section = Category.PRACTICAL
-        ), Book(
+        ),
+        Book(
             id = 5,
             title = "Izbe-iz terbelis konturların izertlew",
             assetId = R.raw.lab_5,
@@ -167,48 +169,55 @@ object BookRepository {
         ),
         Book(
             id = 6,
-            title = "Parallel terbelis konturın izertlew" ,
+            title = "Parallel terbelis konturın izertlew",
             assetId = R.raw.lab_6,
             section = Category.PRACTICAL
         ),
         Book(
             id = 8,
-            title = "Yarım ótkezgishli diod parametrleri hám xarakteristikaların izertlew" ,
+            title = "Yarım ótkezgishli diod parametrleri hám xarakteristikaların izertlew",
             assetId = R.raw.lab_8,
             section = Category.PRACTICAL
-        ), Book(
+        ),
+        Book(
             id = 9,
-            title = "Stabilitron xarakteristikası hám parametrlerin izertlew" ,
+            title = "Stabilitron xarakteristikası hám parametrlerin izertlew",
             assetId = R.raw.lab_9,
             section = Category.PRACTICAL
-        ), Book(
+        ),
+        Book(
             id = 10,
-            title = "Optrondı izertlew" ,
+            title = "Optrondı izertlew",
             assetId = R.raw.lab_10,
             section = Category.PRACTICAL
-        ), Book(
+        ),
+        Book(
             id = 11,
-            title = "UE jalǵanıw sxemasındaǵı BT niń statikalıq VAX lardi izertlew" ,
+            title = "UE jalǵanıw sxemasındaǵı BT niń statikalıq VAX lardi izertlew",
             assetId = R.raw.lab_11,
             section = Category.PRACTICAL
-        ),Book(
+        ),
+        Book(
             id = 12,
-            title = "UB jalǵanıw sxeması daǵı BT ni statikalıq VAX larini izertlew" ,
+            title = "UB jalǵanıw sxeması daǵı BT ni statikalıq VAX larini izertlew",
             assetId = R.raw.lab_12,
             section = Category.PRACTICAL
-        ),Book(
+        ),
+        Book(
             id = 13,
-            title = "MT statikalıq xarakteristikaların izertlew" ,
+            title = "MT statikalıq xarakteristikaların izertlew",
             assetId = R.raw.lab_13,
             section = Category.PRACTICAL
-        ),Book(
+        ),
+        Book(
             id = 14,
-            title = "Kanalı induksiyalanǵan metal -dielektrik-yarım ótkezgish (MDYa) xarakteristikaların izertlew" ,
+            title = "Kanalı induksiyalanǵan metal -dielektrik-yarım ótkezgish (MDYa) xarakteristikaların izertlew",
             assetId = R.raw.lab_14,
             section = Category.PRACTICAL
-        ),Book(
+        ),
+        Book(
             id = 15,
-            title = "Operatsion kúsheytgishlerdi izertlew" ,
+            title = "Operatsion kúsheytgishlerdi izertlew",
             assetId = R.raw.lab_15,
             section = Category.PRACTICAL
         ),
@@ -227,9 +236,27 @@ object BookRepository {
             title = "SILLABUS",
             assetId = R.raw.syllabus,
             section = Category.DOCUMENTS
+        ), Book(
+            id = 2,
+            title = "Juwmaqlawshı baxalaw kriteryası",
+            assetId = R.raw.assesment_2024_2025,
+            section = Category.DOCUMENTS
+        ), Book(
+            id = 2,
+            title = "Pán boyınsha baxalaw kriteryası",
+            assetId = R.raw.subject_assesment_criterias,
+            section = Category.DOCUMENTS
         )
     )
-    fun getExamMaterials() = emptyList<Book>()
+
+    fun getExamMaterials() = listOf(
+        Book(
+            id = 1,
+            title = "Juwmaqlawshı qadaǵalaw jumısları sorawlar banki",
+            assetId = R.raw.sirtqi_test_bank,
+            section = Category.EXAM
+        )
+    )
 }
 
 enum class Category {
